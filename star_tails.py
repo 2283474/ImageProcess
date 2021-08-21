@@ -17,7 +17,7 @@ def star_tails(folder_path, file_extension, output_path, filter_func=None, stack
             new_img = filter_func(new_img)
 
         if stack_func:
-            while len(img_que) < stack_num:
+            if len(img_que) < stack_num:
                 img_que.append(new_img)
 
             if len(img_que) == stack_num:
